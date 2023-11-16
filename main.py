@@ -19,34 +19,42 @@ def main():
     """
     st.title("Document Summarizer")
 
-    input_method = st.radio("Select input method", ('Upload a document', 'Enter a YouTube URL'))
+    #input_method = st.radio("Select input method", ('Upload a document',''))
+
+    input_method = 'Upload a document'
 
     if input_method == 'Upload a document':
-        uploaded_file = st.file_uploader("Upload a document to summarize, 10k to 100k tokens works best!", type=['txt', 'pdf'])
+        uploaded_file = st.file_uploader("Upload a pdf, docx or txt document to summarize, 10k to 100k tokens works best!", type=['txt', 'pdf', 'docx'])
 
-    if input_method == 'Enter a YouTube URL':
-        youtube_url = st.text_input("Enter a YouTube URL to summarize")
+    #if input_method == 'Enter a YouTube URL':
+    #    youtube_url = st.text_input("Enter a YouTube URL to summarize")
 
     api_key = st.text_input("Enter API key here, or contact the author if you don't have one.")
-    st.markdown('[Author email](mailto:ethanujohnston@gmail.com)')
+    st.markdown('[Author email](mailto:james_dey@hotmail.com)')
     use_gpt_4 = st.checkbox("Use GPT-4 for the final prompt (STRONGLY recommended, requires GPT-4 API access - progress bar will appear to get stuck as GPT-4 is slow)", value=True)
     find_clusters = st.checkbox('Find optimal clusters (experimental, could save on token usage)', value=False)
-    st.sidebar.markdown('# Made by: [Ethan](https://github.com/e-johnstonn)')
-    st.sidebar.markdown('# Git link: [Docsummarizer](https://github.com/e-johnstonn/docsummarizer)')
+    st.sidebar.markdown('# Created by: [Ethan](https://github.com/e-johnstonn)')
+    st.sidebar.markdown('# Adapted by: [James](https://github.com/deytalytics)')
+    st.sidebar.markdown('# Git link: [GPT4_Doc_summarizer](https://github.com/deytalytics/gpt4_doc_summarizer)')
     st.sidebar.markdown("""<small>It's always good practice to verify that a website is safe before giving it your API key. 
                         This site is open source, so you can check the code yourself, or run the streamlit app locally.</small>""", unsafe_allow_html=True)
 
+    st.markdown("## Synopsis Settings")
+    st.write("Enter the number of paragraphs you want in the synopsis")  # Write the label text in the second column
+    col1, col2 = st.columns([0.2, 0.8])
+    num_synopsis = col1.number_input("", min_value=1, max_value=100, value=10, label_visibility="collapsed")  # Add the input box to the first column
 
+    st.markdown('<br>', unsafe_allow_html=True)
     if st.button('Summarize (click once and wait)'):
         if input_method == 'Upload a document':
-            process_summarize_button(uploaded_file, api_key, use_gpt_4, find_clusters)
+            process_summarize_button(uploaded_file, api_key, use_gpt_4, find_clusters, num_synopsis)
 
-        else:
-            doc = transcript_loader(youtube_url)
-            process_summarize_button(doc, api_key, use_gpt_4, find_clusters, file=False)
+        #else:
+        #    doc = transcript_loader(youtube_url)
+        #    process_summarize_button(doc, api_key, use_gpt_4, find_clusters, file=False)
 
 
-def process_summarize_button(file_or_transcript, api_key, use_gpt_4, find_clusters, file=True):
+def process_summarize_button(file_or_transcript, api_key, use_gpt_4, find_clusters, num_synopsis, file=True):
     """
     Processes the summarize button, and displays the summary if input and doc size are valid
 
@@ -68,7 +76,7 @@ def process_summarize_button(file_or_transcript, api_key, use_gpt_4, find_cluste
             temp_file_path = create_temp_file(file_or_transcript)
             doc = doc_loader(temp_file_path)
             map_prompt = file_map
-            combine_prompt = file_combine
+            combine_prompt = file_combine + f" There should be exactly {num_synopsis} paragraphs in the synopsis."
         else:
             doc = file_or_transcript
             map_prompt = youtube_map
@@ -105,7 +113,7 @@ def validate_doc_size(doc):
         st.warning('File or transcript too big!')
         return False
 
-    if not token_minimum(doc, 2000):
+    if not token_minimum(doc, 1000):
         st.warning('File or transcript too small!')
         return False
     return True

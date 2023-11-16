@@ -1,6 +1,6 @@
 import tempfile
 
-import PyPDF2
+import PyPDF2, pypandoc, tempfile
 
 from io import StringIO
 
@@ -24,6 +24,19 @@ def pdf_to_text(pdf_file):
         text.write(p.extract_text())
     return text.getvalue().encode('utf-8')
 
+def docx_to_text(docx_file):
+    """
+    Convert a docx file to a string of text.
+    :param docx_file:
+    :return: A string of text
+    """
+    temp_file = tempfile.NamedTemporaryFile(delete=False)
+    temp_file.write(docx_file.getbuffer())
+    print(temp_file.name)
+    doc = pypandoc.convert_file(temp_file.name, 'plain', outputfile='output.txt', format='docx')
+    with open('output.txt', 'r', encoding = 'utf-8') as file:
+        text = file.read().replace("â€”", '—').replace("â€“", '—').replace('\n', '')
+    return text.encode('utf-8')
 
 def check_gpt_4(api_key):
     """
@@ -58,7 +71,7 @@ def token_limit(doc, maximum=200000):
     return True
 
 
-def token_minimum(doc, minimum=2000):
+def token_minimum(doc, minimum=1000):
     """
     Check if a document has more tokens than a specified minimum.
 
@@ -104,6 +117,8 @@ def create_temp_file(uploaded_file):
     with tempfile.NamedTemporaryFile(delete=False, suffix='.txt') as temp_file:
         if uploaded_file.type == 'application/pdf':
             temp_file.write(pdf_to_text(uploaded_file))
+        elif uploaded_file.type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
+            temp_file.write(docx_to_text(uploaded_file))
         else:
             temp_file.write(uploaded_file.getvalue())
     return temp_file.name

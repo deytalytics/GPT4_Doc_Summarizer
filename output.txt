@@ -1,0 +1,291 @@
+Name: James Dey
+
+Home Address: 9 Milton Road
+
+  Wimbledon
+
+  SW19 8SF
+
+Tel No: 07941 252447
+
+Email: james_dey@hotmail.com
+
+-   Enterprise Archtiecture (BizzDesign, Sparx EA)
+
+-   Cloud data architecture
+
+-   Data Modelling (Conceptual, Physical, Logical), Kimball, Inmon, Data
+    Vault, UML)
+
+-   Data Integration (ETL/ELT) and Application Integration (EAI/API)
+
+-   Data Discovery, Reporting & Data Extracts
+
+-   Business Analysis
+
+-   Business Glossary
+
+-   Axon Data Governance
+
+Recent certification
+
+-   TOGAF Certification – Part 1 Foundation – September 2020
+
+-   Collibra Expert II – June 2020
+
+-   Collibra Expert I - March 2019
+
+-   Collibra Expert III – March 2019
+
+-   SAFe4 Agilist – October 2018
+
+Education
+
+University of Southampton Management School,
+
+Home Farm
+
+Leigh Road
+
+Eastleigh
+
+MSc Information Engineering 1996
+
+University of Bradford
+
+Richmond Road
+
+Bradford
+
+West Yorkshire
+
+BEng. (Hons.) Electrical & Electronic Engineering 2ii 1991
+
+Work History (from 2017 onwards)
+
+[]Shell November 2022 to Present
+
+Job Title: Enterprise Data Architect
+
+Trading & Risk Management data store
+
+Developed a comprehensive conceptual and logical data model to support
+trading and risk management (TRM) operations in the renewable energy,
+power, and gas sectors. This model, which was rapidly prototyped,
+encompasses various aspects of TRM including contracts, deal books,
+deals, deal tickets, deal legs, trading desks and subdesks, trading
+areas, markets, market components, traders, counterparties, legal
+entities, commodities, deal positions/exposures, and the computation of
+profit and loss.
+
+Data Mesh Implementation
+
+Spearheaded an architecture team in the development of a reference
+architecture aimed at establishing a platform for the creation and
+management of data products and datasets by specific business domains
+through an administrative website.
+
+Data Marketplace
+
+Established a data marketplace that enables consumers to discover
+datasets categorized by business area. Each dataset in this marketplace
+offers detailed information about its content, ownership, provenance,
+quality, and update schedule.
+
+Skills: BizzDesign, PowerDesigner, Collibra, Databricks
+
+[] Lloyds Banking Group May 2022 to November 2022
+
+Job Title: Enterprise Data Architect
+
+Strategic Data Products Program
+
+Contributed to the Strategic Data Products program, developing
+educational materials for the central architecture team. These materials
+provide guidance on designing data products that take into account the
+need for a federated enterprise conceptual and logical data model.
+Definitions in a data governance tool were incorporated to support this
+initiative.
+
+Risk Data Engineering Team Education
+
+Instructed the Risk data engineering team on the creation of a strategic
+data product for a Proof of Concept. This involved the use of Data Vault
+2.0 to establish a flexible enterprise data hub that facilitates the
+development of data products, including APIs, datasets, and stored
+queries.
+
+Skills: Sparx EA, Collibra, Confluence, Jira
+
+DEFRA November 2021 to May 2022
+
+Job Title: Data Solution Architect
+
+Strategic Workforce Planning
+
+Tasked with ensuring the alignment of people, skills, and jobs to meet
+organizational needs. This project aims to integrate HR, Skill, and
+Project Demand data into a strategic workforce planning tool to fulfil
+this requirement.
+
+Technologies: Sparx EA, Oracle HR, Kineo Learning Zone, Active
+Directory, Azure SQL Database, Power BI
+
+Conservation Management System
+
+Responsible for the transition from a third-party vendor system to an
+in-house solution for managing designated sites. This includes data
+related to site details (address, ownership), environmental factors
+(habitats, features, condition, air quality, water quality), and
+conservation efforts (site improvement plans, marine & terrestrial
+conservation advice).
+
+Technologies: Sparx EA, ArcGIS, Azure SQL Database, Power BI,
+PowerDynamics
+
+Mintel May 2021 to November 2021
+
+Job Title: Data Solution Architect
+
+I was engaged in the architecture and data modelling of a cloud-based,
+greenfield enterprise data warehouse aimed at enhancing data quality and
+standardizing taxonomies (as defined by data governance) across our
+various product websites. This encompassed Consumer Product information,
+Purchase Intelligence, Consumer feedback data, Food & Drink items on
+Restaurant menus, Retailer intelligence, and insights on North American
+marketing campaigns. The pilot phase was focused on the analysis of Food
+& Drink Product & Flavour data.
+
+The data modelling and data integration patterns were based on Data
+Vault 2.0 for the Landing Area, Enterprise Data Warehouse, and Data Mart
+stages.
+
+I also evaluated master data management solution: Profisee, Semarchy,
+and Ataccama. While no data governance tool was in use, the need for one
+to store business rules, business glossary, and data dictionary items
+was identified.
+
+Technical Stack: PowerDesigner, Snowflake, Looker, Fivetran, dbt,
+Airflow
+
+DTSQUARED Ltd June 2020 to May 2021
+
+Permanently hired after 3 months as a data architect / manager and
+promoted in January 2020 to lead data architect (see job below for
+details of assignment).
+
+Job Title: Manager (Enterprise Data Architecture)
+
+Ford Credit (via DTSQUARED Ltd) March 2020 to April 2021 www.ford.co.uk
+
+I worked for Ford Credit (the vehicle financing wing of Ford Motors),
+where I provided business analysis and conceptual data model (using
+Erwin) that covered their entire global business, with a particular
+emphasis on Ford Credit North America & Ford Credit Europe. The data
+domains/subject areas were split into Product, Geography, Party,
+Commodity, Contract, Financial Ledger, Treasury, Operational Performance
+& Regulatory Reporting.
+
+From a business perspective, I covered the core analysis of retail,
+commercial & wholesale contracts with their respective plans (finance &
+soft adds e.g., insurance/extended warranty) for the financing of
+commodities (vehicles & hard adds e.g., leather gear stick, alloy wheel
+trims). Additionally, the coverage included FCE Bank, Treasury’s
+liquidity requirements (money market & wall street investments),
+securitisation (selling on the risk of contract failure) and Dealer
+funding. Operational performance covered items such as complaints and
+call volumes in the business/service centres. Financial ledger covered
+the general ledger, subledgers & consolidated statutory accounts.
+Regulatory reporting covered AnaCredit & LMM.
+
+In addition to the above, we added attribute level information and
+additional entities to transform the Conceptual Data Model into a
+Logical Data Model on a use case basis.
+
+I managed the team that populated Physical Axon (Data Dictionary & Data
+Lineage) and provided the domain and entity information (from the LDM)
+to the Data Governance team who used them to classify the data elements
+& business terms and loaded it into Logical Axon (Glossary & Data
+Quality) and established standard data quality rules and assigned data
+ownership.
+
+Separately, I mentored the technical graduates by developing a course
+that took them through how to use Erwin for Conceptual, Logical &
+Physical data modelling, deploying DDL to Snowflake and creating a
+Python Flask Web App which displayed a Ford Motors Product Catalogue.
+
+Technical Skills: Erwin Data Modeler, Business Analysis, Powerpoint,
+Axon Data Governance, Python, Snowflake
+
+[] Deutsche Bank February 2018 to December 2018 www.db.com
+
+Job Title: Enterprise Data Architect
+
+-   Provided architectural services that covered non-financial risk,
+    including IT, Data security, Transaction processing, Record
+    Management, Business Continuity, Vendor/Third Party, HR, and
+    Physical Assets.
+
+-   Developed a data strategy that encompassed systems related to Audit.
+
+-   Led a development and operational team that created a Tableau Web
+    Data Connector. This allowed data to be pulled in via a RESTful API
+    (built from a Java Spring boot framework) from relational or web
+    sources. These data sources were then used to produce reports for
+    the Risk Committee.
+
+-   Added non-financial risk asset and attribute definitions to the
+    Collibra business glossary. This enabled the technical metadata to
+    be pulled into the REST API over a dedicated feed and merged in as
+    column descriptions for passing back to Tableau.
+
+-   Served as a representative on the Architectural Design Forum.
+
+Skills: SAP PowerDesigner, Collibra
+
+Open Banking Ltd. (now part of UK Finance) December 2016 to February
+2018
+https://openbanking.atlassian.net/wiki/spaces/DZ/pages/16320694/Open+Data+API+Specifications
+Job Title: Product Owner and Lead Data Architect
+Responsible for the analysis and design of the re-write of the ATM,
+Branch, Personal Current Account, Business Current Account, and
+Commercial Credit Card API message specification. This involved defining
+a RESTful API using Swagger.io and generating a JSON Schema message
+payload via GEFEG.Fx (Pay UK’s preferred XML specification tool), which
+was then converted via Node.js.
+
+Other noteworthy organisations worked for on a contract or permanent
+basis prior to 2017:-
+
+  -----------------------------------------------------------------------
+  [Bank of America   Bank of America Merrill Lynch
+  logo | Logok]      
+  ------------------ ----------------------------------------------------
+                     
+
+  [Image result for  Visa Europe
+  visa europe icon]  
+
+                     
+
+  [‎Oracle Cloud      Oracle
+  Infrastructure on  
+  the App Store]     
+
+                     
+
+  [IBM Logo PNG      IBM
+  Image - PurePNG |  
+  Free transparent   
+  CC0 PNG Image      
+  Library]           
+
+                     
+
+  [Camelot announces Camelot (The UK National Lottery Operator)
+  National Lottery   
+  expansion plans -  
+  BBC News]          
+
+                     
+  -----------------------------------------------------------------------
